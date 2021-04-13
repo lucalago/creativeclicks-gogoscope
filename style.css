@@ -13250,6 +13250,7 @@ section.header-bar {
   background-color: white;
   height: 90px;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  z-index: 99999;
 }
 section.header-bar > div > div.countdown-box {
   padding: 8px 8px;
@@ -13266,9 +13267,16 @@ section.header-bar > div > div.countdown-box {
   color: ;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 /* SECTION: PURCHASE FLOW */
 
 section.purchase-flow {
+  margin-top: 96px;
   height: 160px;
   border-bottom: 1px solid rgb(243, 243, 243);
 }
@@ -13362,6 +13370,6 @@ div.purchase-flow-status-wrapper {
   width: 100%;
 }
 div.purchase-flow-status {
-  max-width: 864px;
+  min-width: 60%;
   justify-content: space-between;
 }
