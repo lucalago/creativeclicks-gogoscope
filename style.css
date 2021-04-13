@@ -13160,3 +13160,208 @@ section.thankyou .thankyou-content table {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Luca css */
+
+section.menu {
+  display: none;
+}
+
+/* SPACING */
+.ml-1 {
+  margin-left: 8px;
+}
+.ml-2 {
+  margin-left: 16px;
+}
+.ml-3 {
+  margin-left: 24px;
+}
+.ml-4 {
+  margin-left: 32px;
+}
+.mt-1 {
+  margin-top: 8px;
+}
+.mt-2 {
+  margin-top: 16px;
+}
+.mt-3 {
+  margin-top: 24px;
+}
+.mt-4 {
+  margin-top: 32px;
+}
+
+/* DISPLAY / FLEX */
+
+.d-flex-row {
+  display: flex !important;
+  flex-direction: row !important;
+}
+.d-flex-column {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* TIPOGRAPHY */
+
+.bold {
+  font-weight: 400;
+}
+.super-bold {
+  font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* COLOR */
+
+.orange-border-2 {
+  border: solid 2px orange !important;
+}
+.orange-bg {
+  background-color: orange !important;
+}
+
+/* ALIGNMENT */
+
+.justify-center {
+  justify-content: center !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.justify-around {
+  justify-content: space-around !important;
+}
+.align-center {
+  align-items: center !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+/* SECTION: Header bar countdown */
+
+section.header-bar {
+  width: 100vw !important;
+  background-color: white;
+  height: 90px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+section.header-bar > div > div.countdown-box {
+  padding: 8px 8px;
+  border-radius: 16px;
+  height: 74px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.countdown-number {
+  color: ;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.countdown-title {
+  color: ;
+}
+
+/* SECTION: PURCHASE FLOW */
+
+section.purchase-flow {
+  height: 160px;
+  border-bottom: 1px solid rgb(243, 243, 243);
+}
+div.purchase-flow-stage-wrapper {
+  height: 100%;
+  width: 40px;
+}
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: #486445;
+  padding-left: 0px;
+}
+
+#progressbar li {
+  list-style-type: none;
+  font-size: 13px;
+  width: 20%;
+  float: left;
+  position: relative;
+  font-weight: 400;
+}
+
+#progressbar .step0:before {
+  font-family: FontAwesome;
+  content: "\f10c";
+  color: #fff
+}
+
+#progressbar li:before {
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  background: #d1e2cb;
+  border-radius: 50%;
+  margin: auto;
+  padding: 0px
+}
+
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 12px;
+  background: #d1e2cb;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  z-index: -1
+}
+
+#progressbar li:last-child:after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  left: -50%
+}
+
+#progressbar li:nth-child(2):after {
+  left: -50%
+}
+
+#progressbar li:first-child:after {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  left: 50%
+}
+
+#progressbar li:last-child:after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px
+}
+
+#progressbar li:first-child:after {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #31b631;
+}
+
+#progressbar li.active:before {
+  font-family: FontAwesome;
+  content: "\f00c"
+}
+div.purchase-flow-status-wrapper {
+  width: 100%;
+}
+div.purchase-flow-status {
+  max-width: 864px;
+  justify-content: space-between;
+}
