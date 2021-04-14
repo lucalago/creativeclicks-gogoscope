@@ -13192,6 +13192,18 @@ section.menu {
 .mt-4 {
   margin-top: 32px;
 }
+.mb-1 {
+  margin-bottom: 8px;
+}
+.mb-2 {
+  margin-bottom: 16px;
+}
+.mb-3 {
+  margin-bottom: 24px;
+}
+.mb-4 {
+  margin-bottom: 32px;
+}
 
 /* DISPLAY / FLEX */
 
@@ -13215,14 +13227,18 @@ section.menu {
 .uppercase {
   text-transform: uppercase;
 }
+h1 {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
 
 /* COLOR */
 
 .orange-border-2 {
-  border: solid 2px orange !important;
+  border: solid 2px rgb(255, 166, 0) !important;
 }
 .orange-bg {
-  background-color: orange !important;
+  background-color: rgb(255, 166, 0) !important;
 }
 
 /* ALIGNMENT */
@@ -13248,9 +13264,12 @@ section.menu {
 section.header-bar {
   width: 100vw !important;
   background-color: white;
-  height: 90px;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   z-index: 99999;
+}
+section.header-bar  > div.header-bar-wrapper {
+  margin: 1vw 10vw;
+  width: 100%;
 }
 section.header-bar > div > div.countdown-box {
   padding: 8px 8px;
@@ -13259,12 +13278,11 @@ section.header-bar > div > div.countdown-box {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 .countdown-number {
-  color: ;
   font-weight: 600;
   font-size: 1.5rem;
 }
 .countdown-title {
-  color: ;
+  color: black;
 }
 
 .sticky {
@@ -13276,25 +13294,23 @@ section.header-bar > div > div.countdown-box {
 /* SECTION: PURCHASE FLOW */
 
 section.purchase-flow {
-  margin-top: 96px;
-  height: 160px;
+  max-height: 160px;
   border-bottom: 1px solid rgb(243, 243, 243);
-}
-div.purchase-flow-stage-wrapper {
-  height: 100%;
-  width: 40px;
+  position: relative;
+  left: 0;
 }
 #progressbar {
   margin-bottom: 30px;
   overflow: hidden;
   color: #486445;
   padding-left: 0px;
+  margin: 0 15vw 30px;
 }
 
 #progressbar li {
   list-style-type: none;
   font-size: 13px;
-  width: 20%;
+  width: 100%;
   float: left;
   position: relative;
   font-weight: 400;
@@ -13370,6 +13386,103 @@ div.purchase-flow-status-wrapper {
   width: 100%;
 }
 div.purchase-flow-status {
-  min-width: 60%;
+  width: 100%;
+  margin: 0 15vw;
   justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* unique offer banner */
+
+section.unique-offer {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+}
+section.unique-offer > div.unique-offer-wrapper {
+  margin: 0 5vw;
+  padding: 32px 40px;
+  border-radius: 16px;
+  border: solid 1px rgb(223, 234, 245);
+  box-shadow: rgba(151, 169, 185, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+section.unique-offer > div.unique-offer-wrapper > h2.h2-unique-offer {
+  font-weight: bold !important;
+  font-size: 1.5rem;
+}
+section.unique-offer > div.unique-offer-wrapper > h2.h2-unique-offer > span.span-highlight {
+  background: rgb(255, 211, 129);
+  border: solid 1px rgb(255, 215, 39);
+  padding: 2px 4px;
+  border-radius: 4px;
+  box-shadow: rgba(49, 54, 58, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+/* section Product Detail and CTA */
+
+section.product-detail-cta {
+  width: 100%;
+  padding: 1vh 3vw;
+}
+
+section.product-detail-cta > div > div.description-cta-div {
+  border-radius: 24px 40px 24px 40px;
+  border-top: solid 1px rgb(218, 229, 243);
+  border-left: solid 1px rgb(200, 217, 240);
+  padding-bottom: 40px;
+}
+
+section.product-detail-cta > div > div.photo-container, section.product-detail-cta > div > div.description-cta-div {
+  width: 100%;
+  padding: 5vh 2.5vw;
+}
+
+span.orange-border-2 {
+  border-radius: 4px !important;
+  padding: 2px;
+}
+
+section.product-detail-cta > div > div > div.product-description > h4.product-price {
+  font-size: 1.3rem;
+}
+
+section.product-detail-cta > div > div > div.product-description > h4.product-price > span.regular-price-crossed {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: grey;
+  font-weight: 600 !important;
+}
+
+section.product-detail-cta > div > div > div.product-description > img.review-stars {
+  max-width: 112px;
+}
+
+@media screen and (max-width: 959px) {
+  section.product-detail-cta > div {
+    flex-direction: column-reverse !important;
+  }
+  section.unique-offer > div > h2.h2-unique-offer {
+    font-size: 1.3rem !important;
+  }
+  section.unique-offer, div.description-cta-div {
+    margin-top: 24px !important;
+  }
+  div.description-cta-div {
+    margin-left: 5vw !important;
+    margin-right: 5vw !important;
+    width: 100% !important;
+  }
+  .d-none {
+    display: none !important;
+  }
+  div.description-cta-div > div.product-description > img.mobile-image-description {
+    position: relative;
+    margin: 0 auto 40px;
+    max-width: 300px; 
+  }
+}
+@media screen and (min-width: 960px) {
+  .mobile-only {
+    display: none !important;
+  }
 }
