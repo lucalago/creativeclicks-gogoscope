@@ -13219,7 +13219,8 @@ section.menu {
 /* TIPOGRAPHY */
 
 .bold {
-  font-weight: 400;
+  font-weight: 400 !important;
+  font-weight: bold !important;
 }
 .super-bold {
   font-weight: 600;
@@ -13230,6 +13231,14 @@ section.menu {
 h1 {
   font-size: 1.8rem;
   line-height: 2.2rem;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 /* COLOR */
@@ -13408,7 +13417,6 @@ section.unique-offer > div.unique-offer-wrapper {
 }
 section.unique-offer > div.unique-offer-wrapper > h2.h2-unique-offer {
   font-weight: bold !important;
-  font-size: 1.5rem;
 }
 section.unique-offer > div.unique-offer-wrapper > h2.h2-unique-offer > span.span-highlight {
   background: rgb(255, 211, 129);
@@ -13423,6 +13431,7 @@ section.unique-offer > div.unique-offer-wrapper > h2.h2-unique-offer > span.span
 section.product-detail-cta {
   width: 100%;
   padding: 1vh 3vw;
+  margin-bottom: 0 !important;
 }
 
 section.product-detail-cta > div > div.description-cta-div {
@@ -13457,7 +13466,86 @@ section.product-detail-cta > div > div > div.product-description > img.review-st
   max-width: 112px;
 }
 
+div.cta-payment-method > button.cta-button {
+  width: 100%;
+  color: black;
+  background-color: orange;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 16px 32px;
+  border: solid 1px rgb(255, 225, 53);
+  border-bottom: 3px solid orange !important;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  transition: all 0.2s ease-in-out;
+}
+div.cta-payment-method > button.cta-button:hover {
+  background-color: rgb(255, 196, 0);
+  border-bottom: 3px solid rgb(255, 196, 0) !important;
+  box-shadow: rgba(218, 186, 126, 0.48) 6px 2px 16px 0px, rgba(214, 183, 136, 0.8) -6px -2px 16px 0px;
+  cursor: pointer !important;
+}
+div.cta-payment-method > img.cta-cards {
+  margin-top: 40px !important;
+  filter: grayscale(0.35);
+}
+
+
+/* Section more information  */
+
+section.more-info-product {
+  margin-top: -55px;
+}
+section.more-info-product > div.more-info-title {
+  padding: 40px 0;
+  background-color: rgb(45, 114, 24);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+section.more-info-product > div.more-info-title > h2 {
+  color: white;
+}
+section.more-info-product > div.more-info-details-wrapper > div.more-info-text-cta > div.more-info-text-wrapper > div.more-info-text {
+  padding: 8px 16px !important;
+}
+section.more-info-product > div.more-info-details-wrapper > div.more-info-text-cta > div.more-info-text-wrapper > div.more-info-text > p {
+  color: rgb(75, 75, 75);
+}
+div.more-info-text-head {
+  border-top: solid 2px orange;
+  border-bottom: solid 2px orange;
+  padding: 16px 0;
+  text-transform: uppercase;
+}
+
+div.more-info-text-cta {
+  padding: 5vh 2.5vw;
+}
+
+/* Decline Offer */
+
+div.decline-go-next-page {
+  margin: 16px 0;
+  width: 100%;
+  text-align: center;
+}
+div.decline-go-next-page a {
+  text-decoration: underline;
+  color: rgb(106, 170, 230) !important;
+  font-size: .9rem;
+}
+
+/* Specific responsiveness adjustments */
+
 @media screen and (max-width: 959px) {
+  .countdown-title {
+    font-size: 0.8rem !important;
+    line-height: 1.2rem !important;
+  }
+  section.header-bar > div.header-bar-wrapper > div p {
+    font-size: 0.8rem !important;
+    line-height: 0.8rem !important;
+    text-align: justify;
+  }
   section.product-detail-cta > div {
     flex-direction: column-reverse !important;
   }
@@ -13479,6 +13567,13 @@ section.product-detail-cta > div > div > div.product-description > img.review-st
     position: relative;
     margin: 0 auto 40px;
     max-width: 300px; 
+  }
+  section.more-info-product > div.more-info-details-wrapper {
+    flex-direction: column !important;
+  }
+  section.more-info-product > div.more-info-details-wrapper > div.image-more-info img {
+    max-width: 70% !important;
+    margin-top: 40px;
   }
 }
 @media screen and (min-width: 960px) {

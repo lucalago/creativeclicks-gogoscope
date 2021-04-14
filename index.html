@@ -49,7 +49,7 @@
 
 <!-- header bar with countdown (sticky when scroll and reaches specific viewheight) -->
 <section class="header-bar d-flex-row align-center justify-center">  <!-- add sticky with JS to become sticky top on scroll -->
-    <div class="d-flex-row justify-center header-bar-wrapper">
+    <div class="d-flex-row justify-center header-bar-wrapper align-center">
         <div class="countdown-box orange-border-2 d-flex-column justify-center">
             <span class="countdown-number">
                 <p class="paragraph-strong text-center">05</p>
@@ -134,14 +134,78 @@
                 <h4 class="product-price mt-4 super-bold"><span class="regular-price-crossed  bold">Regular price: $79.00</span><br>Today's Price: $39.50</h4>
                 <img class=" mt-4 review-stars" src="assets/stars.png">
             </div>    
+            <!-- CTA and Payment methods -->
             <div class="d-flex-column cta-payment-method">
-                <button>Yes, Add This To My Order - Only $39.50</button>
-                <img>
+                <button class="cta-button mt-4">Yes, Add This To My Order - Only $39.50</button>
+                <img class="cta-cards" src="assets/cards.jpg">
             </div>
         </div>
     </div>    
 
 </section>
+
+<!-- More information about Product -->
+
+<section class="more-info-product">
+    <div class="more-info-title text-center ">
+        <h2 class="super-bold">The most advanced miniature telescope<wbr> that zooms in for clear, crisp vision.</h2>
+    </div>
+    <!-- Decline Div -->
+    <div class="decline-go-next-page">
+        <a href="#">No thank you, I don’t want to <wbr>take advantage of this one-time offer ></a>
+    </div>
+    <!-- continuation of section -->
+    <div class="more-info-details-wrapper d-flex-row justify-center">
+        <div class="video-more-info d-none">
+            <video src="assets/video.mp4" controls preload="auto"></video>
+        </div>
+        <div class="image-more-info justify-center text-center mobile-only">
+            <img src="assets/product3.png">
+        </div>
+        <div class="more-info-text-cta d-flex-column">
+            <div class="more-info-text-wrapper mb-2">
+                <div class="more-info-text-head text-center">
+                    <h2 class="bold"><span>10x</span> magnification</h3>
+                </div>
+            </div>
+            <div class="more-info-text-wrapper d-flex-row mb-2 mt-4">
+                <div class="image-more-info">
+                    <img src="assets/usp1.png">
+                </div>
+                <div class="more-info-text">
+                    <h3 class="bold">Precision CNC/CAD construction</h3>
+                    <p>Super quality with aspherical elements for the sharpest optics!</p>
+                </div>
+            </div>
+            <div class="more-info-text-wrapper d-flex-row mb-2">
+                <div class="image-more-info">
+                    <img src="assets/usp2.png">
+                </div>
+                <div class="more-info-text">
+                    <h3 class="bold">High-quality and lightweight</h3>
+                    <p>Carry anywhere - see 50 miles or more!</p>
+                </div>
+            </div>
+            <div class="more-info-text-wrapper d-flex-row mb-2">
+                <div class="image-more-info">
+                    <img src="assets/usp3.png">
+                </div>
+                <div class="more-info-text">
+                    <h3 class="bold">Get awesome photos</h3>
+                    <p>Clip lens to your smartphone to beat DSLRs!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more-info-details-wrapper d-flex-row justify-center">
+        <!-- CTA and Payment methods -->
+        <div class="d-flex-column cta-payment-method">
+            <button class="cta-button mt-4">Yes, Add This To My Order - Only $39.50</button>
+            <img class="cta-cards" src="assets/cards.jpg">
+        </div>
+  
+    </div>
+</section> 
 
 <!-- next section? -->
 
