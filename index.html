@@ -10,597 +10,214 @@
     <script defer src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/8534e68b77.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./bulma.min.css">
+    <script src="animation.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 
 </head>
 
 
 <body class="interstitial">
-<!-- hidden menu for interstitial -->
-<section class="menu">
-    <div class="container">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <img src="./assets/logo.png" alt="">
-                </a>
+    <!-- hidden menu for interstitial -->
+    <section class="menu">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="#">
+                        <img src="./assets/logo.png" alt="">
+                    </a>
 
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <a href="tel:+18663008985" class="navbar-item"><img src="./assets/support.png" alt="Call Support"> +1 866 3008985</a>
+                            <a href="mailto:support@gogogadgets.io" class="navbar-item"><img src="./assets/email.png" alt="Email Support"> support@gogogadgets.io</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- header bar with countdown (sticky when scroll and reaches specific viewheight) -->
+    <section class="header-bar d-flex-row align-center justify-center">  <!-- add sticky with JS to become sticky top on scroll -->
+        <div class="d-flex-row justify-center header-bar-wrapper align-center">
+            <div class="countdown-box orange-border-2 d-flex-column justify-center">
+                <span class="countdown-number">
+                    <p class="paragraph-strong text-center">05</p>
+                </span>
+                <span class="countdown-title">
+                    <p>minutes</p>
+                </span>
+            </div>    
+            <div class="countdown-box orange-border-2 d-flex-column justify-center ml-1">
+                <span class="countdown-number">
+                    <p class="paragraph-strong text-center">30</p>
+                </span>
+                <span class="countdown-title">
+                    <p>seconds</p>
+                </span>
             </div>
-
-            <div class="navbar-menu">
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <a href="tel:+18663008985" class="navbar-item"><img src="./assets/support.png" alt="Call Support"> +1 866 3008985</a>
-                        <a href="mailto:support@gogogadgets.io" class="navbar-item"><img src="./assets/email.png" alt="Email Support"> support@gogogadgets.io</a>
+            <div class="d-flex-row align-center ml-4">
+                <p><span class="uppercase"><strong>Act Fast:</span> Grab this one-time exclusive offer before time runs out.<wbr><br>This offer is not available elsewhere on the site.</strong></p>
+            </div>      
+        </div>        
+        </div>
+    </section>
+    <!-- Purchase progress bar indicating the stage of the purchase -->
+    <section class="purchase-flow">
+        <div class="purchase-flow-status-wrapper d-flex-row justify-around">
+            <div class="purchase-flow-status d-flex-row justify-around mt-4">
+                <div class="d-flex">
+                    <div class="text-center">
+                        <p class="font-weight-bold">Checkout</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="text-center">
+                        <p class="font-weight-bold">Bonuses</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="text-center">
+                        <p class="font-weight-bold">Order<br>Receipt</p>
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
-</section>
-
-<!-- header bar with countdown (sticky when scroll and reaches specific viewheight) -->
-<section class="header-bar d-flex-row align-center justify-center">  <!-- add sticky with JS to become sticky top on scroll -->
-    <div class="d-flex-row justify-center header-bar-wrapper align-center">
-        <div class="countdown-box orange-border-2 d-flex-column justify-center">
-            <span class="countdown-number">
-                <p class="paragraph-strong text-center">05</p>
-            </span>
-            <span class="countdown-title">
-                <p>minutes</p>
-            </span>
         </div>    
-        <div class="countdown-box orange-border-2 d-flex-column justify-center ml-1">
-            <span class="countdown-number">
-                <p class="paragraph-strong text-center">30</p>
-            </span>
-            <span class="countdown-title">
-                <p>seconds</p>
-            </span>
-        </div>
-        <div class="d-flex-row align-center ml-4">
-            <p><span class="uppercase"><strong>Act Fast:</span> Grab this one-time exclusive offer before time runs out.<wbr><br>This offer is not available elsewhere on the site.</strong></p>
-        </div>      
-    </div>        
-    </div>
-</section>
-<!-- Purchase progress bar indicating the stage of the purchase -->
-<section class="purchase-flow">
-    <div class="purchase-flow-status-wrapper d-flex-row justify-around">
-        <div class="purchase-flow-status d-flex-row justify-around mt-4">
-            <div class="d-flex">
-                <div class="text-center">
-                    <p class="font-weight-bold">Checkout</p>
-                </div>
-            </div>
-            <div class="d-flex">
-                <div class="text-center">
-                    <p class="font-weight-bold">Bonuses</p>
-                </div>
-            </div>
-            <div class="d-flex">
-                <div class="text-center">
-                    <p class="font-weight-bold">Order<br>Receipt</p>
+        <div class="purchase-flow-wrapper">
+            <div class="d-flex-row justify-center align-center">
+            </div> <!-- Add class 'active' to progress -->
+            <div class="row d-flex justify-center">
+                <div class="col-12">
+                    <ul id="progressbar" class="text-center d-flex-row justify-center align-center mt-4">
+                        <li class="active step0"></li>
+                        <li class="step0"></li>
+                        <li class="step0"></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>    
-    <div class="purchase-flow-wrapper">
-        <div class="d-flex-row justify-center align-center">
-        </div> <!-- Add class 'active' to progress -->
-        <div class="row d-flex justify-center">
-            <div class="col-12">
-                <ul id="progressbar" class="text-center d-flex-row justify-center align-center mt-4">
-                    <li class="active step0"></li>
-                    <li class="step0"></li>
-                    <li class="step0"></li>
-                </ul>
+    </section>
+    <!-- Banner special offer -->
+
+    <section class="unique-offer d-flex-column justify-center align-center mt-2">
+        <div class="unique-offer-wrapper text-center">
+            <h2 class="h2-unique-offer d-none mb-3">WAIT! Here is an <span class="span-highlight orange-bg">Exclusive Offer</span> <wbr>to Complement Your Order</h2>
+            <h2 class="h2-unique-offer mobile-only mb-3">WAIT! Here is an <span class="span-highlight orange-bg">Exclusive Offer</span><br>to Complement Your Order</h2>
+            <p>Complete your product order with a Military Grade Telescope for a maximum outdoor experience.</p>
+            <p>Add this to your order and get a $39.50 discount. We will ship it FREE with your other items.</p>
+        </div>
+    </section>
+
+    <!-- Product Detail and CTA -->
+
+    <section class="product-detail-cta mt-3">
+
+        <div class="d-flex-row align-center">
+            <div class="photo-container text-center">
+                <img src="assets/product2.png">
+            </div>
+            <div class="description-cta-div d-flex-column">    
+                <div class="d-flex-column product-description">
+                    <img class="mobile-image-description mobile-only" src="assets/product1.png">
+                    <h1 class="super-bold">Today, Get the Latest in <wbr>Military-Grade<br> Magnification with Gogoscope Monocular</h1>
+                    <h4 class="bold mt-3"><span class="orange-bg orange-border-2">FREE shipping</span> in the same order</h4>
+                    <h4 class="product-price mt-4 super-bold"><span class="regular-price-crossed  bold">Regular price: $79.00</span><br>Today's Price: $39.50</h4>
+                    <img class=" mt-4 review-stars" src="assets/stars.png">
+                </div>    
+                <!-- CTA and Payment methods -->
+                <div class="d-flex-column cta-payment-method">
+                    <button class="cta-button mt-4">Yes, Add This To My Order - Only $39.50</button>
+                    <img class="cta-cards" src="assets/cards.jpg">
+                </div>
+            </div>
+        </div>    
+
+    </section>
+
+    <!-- More information about Product -->
+
+    <section class="more-info-product">
+        <div class="more-info-title text-center ">
+            <h2 class="super-bold">The most advanced miniature telescope<wbr> that zooms in for clear, crisp vision.</h2>
+        </div>
+        <!-- Decline Div -->
+        <div class="decline-go-next-page">
+            <a href="#">No thank you, I don’t want to <wbr>take advantage of this one-time offer ></a>
+        </div>
+        <!-- continuation of section -->
+        <div class="more-info-details-wrapper d-flex-row justify-center">
+            <div class="video-more-info d-none d-flex-column justify-center align-center">
+                <video src="assets/video.mp4" controls preload="auto"></video>
+            </div>
+            <div class="image-more-info justify-center text-center mobile-only">
+                <img src="assets/product3.png">
+            </div>
+            <div class="more-info-text-cta d-flex-column">
+                <div class="more-info-text-wrapper mb-2">
+                    <div class="more-info-text-head text-center">
+                        <h2 class="bold"><span>10x</span> magnification</h3>
+                    </div>
+                </div>
+                <div class="more-info-text-wrapper d-flex-row mb-2 mt-4">
+                    <div class="image-more-info">
+                        <img src="assets/usp1.png">
+                    </div>
+                    <div class="more-info-text">
+                        <h3 class="bold">Precision CNC/CAD construction</h3>
+                        <p>Super quality with aspherical elements for the sharpest optics!</p>
+                    </div>
+                </div>
+                <div class="more-info-text-wrapper d-flex-row mb-2">
+                    <div class="image-more-info">
+                        <img src="assets/usp2.png">
+                    </div>
+                    <div class="more-info-text">
+                        <h3 class="bold">High-quality and lightweight</h3>
+                        <p>Carry anywhere - see 50 miles or more!</p>
+                    </div>
+                </div>
+                <div class="more-info-text-wrapper d-flex-row mb-2">
+                    <div class="image-more-info">
+                        <img src="assets/usp3.png">
+                    </div>
+                    <div class="more-info-text">
+                        <h3 class="bold">Get awesome photos</h3>
+                        <p>Clip lens to your smartphone to beat DSLRs!</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Banner special offer -->
-
-<section class="unique-offer d-flex-column justify-center align-center mt-2">
-    <div class="unique-offer-wrapper text-center">
-        <h2 class="h2-unique-offer d-none mb-3">WAIT! Here is an <span class="span-highlight orange-bg">Exclusive Offer</span> <wbr>to Complement Your Order</h2>
-        <h2 class="h2-unique-offer mobile-only mb-3">WAIT! Here is an <span class="span-highlight orange-bg">Exclusive Offer</span><br>to Complement Your Order</h2>
-        <p>Complete your product order with a Military Grade Telescope for a maximum outdoor experience.</p>
-        <p>Add this to your order and get a $39.50 discount. We will ship it FREE with your other items.</p>
-    </div>
-</section>
-
-<!-- Product Detail and CTA -->
-
-<section class="product-detail-cta mt-3">
-
-    <div class="d-flex-row align-center">
-        <div class="photo-container text-center">
-            <img src="assets/product2.png">
-        </div>
-        <div class="description-cta-div d-flex-column">    
-            <div class="d-flex-column product-description">
-                <img class="mobile-image-description mobile-only" src="assets/product1.png">
-                <h1 class="super-bold">Today, Get the Latest in <wbr>Military-Grade<br> Magnification with Gogoscope Monocular</h1>
-                <h4 class="bold mt-3"><span class="orange-bg orange-border-2">FREE shipping</span> in the same order</h4>
-                <h4 class="product-price mt-4 super-bold"><span class="regular-price-crossed  bold">Regular price: $79.00</span><br>Today's Price: $39.50</h4>
-                <img class=" mt-4 review-stars" src="assets/stars.png">
-            </div>    
+        <div class="more-info-cta-wrapper d-flex-row justify-center cta-standalone">
             <!-- CTA and Payment methods -->
-            <div class="d-flex-column cta-payment-method">
+            <div class="d-flex-column cta-payment-method ">
                 <button class="cta-button mt-4">Yes, Add This To My Order - Only $39.50</button>
                 <img class="cta-cards" src="assets/cards.jpg">
             </div>
         </div>
-    </div>    
+    </section> 
 
-</section>
+    <!-- End template section -->
 
-<!-- More information about Product -->
-
-<section class="more-info-product">
-    <div class="more-info-title text-center ">
-        <h2 class="super-bold">The most advanced miniature telescope<wbr> that zooms in for clear, crisp vision.</h2>
-    </div>
-    <!-- Decline Div -->
-    <div class="decline-go-next-page">
-        <a href="#">No thank you, I don’t want to <wbr>take advantage of this one-time offer ></a>
-    </div>
-    <!-- continuation of section -->
-    <div class="more-info-details-wrapper d-flex-row justify-center">
-        <div class="video-more-info d-none">
-            <video src="assets/video.mp4" controls preload="auto"></video>
+    <section class="end-message d-flex-column justify-center align-center">
+        <div class="message-wrapper">
+            <h2 class="h2-message">Development End.</h2>
+            <h3 class="h3-message">This page was developed as part of the interview process of Creative Clicks to assess the interviewee's capability of programming a responsive interstitial landing page for one of the company's products.</h3>
+            <button class="btn-luca-website contact-btn standard-btn">View Luca's Portfolio</button>
         </div>
-        <div class="image-more-info justify-center text-center mobile-only">
-            <img src="assets/product3.png">
-        </div>
-        <div class="more-info-text-cta d-flex-column">
-            <div class="more-info-text-wrapper mb-2">
-                <div class="more-info-text-head text-center">
-                    <h2 class="bold"><span>10x</span> magnification</h3>
-                </div>
-            </div>
-            <div class="more-info-text-wrapper d-flex-row mb-2 mt-4">
-                <div class="image-more-info">
-                    <img src="assets/usp1.png">
-                </div>
-                <div class="more-info-text">
-                    <h3 class="bold">Precision CNC/CAD construction</h3>
-                    <p>Super quality with aspherical elements for the sharpest optics!</p>
-                </div>
-            </div>
-            <div class="more-info-text-wrapper d-flex-row mb-2">
-                <div class="image-more-info">
-                    <img src="assets/usp2.png">
-                </div>
-                <div class="more-info-text">
-                    <h3 class="bold">High-quality and lightweight</h3>
-                    <p>Carry anywhere - see 50 miles or more!</p>
-                </div>
-            </div>
-            <div class="more-info-text-wrapper d-flex-row mb-2">
-                <div class="image-more-info">
-                    <img src="assets/usp3.png">
-                </div>
-                <div class="more-info-text">
-                    <h3 class="bold">Get awesome photos</h3>
-                    <p>Clip lens to your smartphone to beat DSLRs!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="more-info-details-wrapper d-flex-row justify-center">
-        <!-- CTA and Payment methods -->
-        <div class="d-flex-column cta-payment-method">
-            <button class="cta-button mt-4">Yes, Add This To My Order - Only $39.50</button>
-            <img class="cta-cards" src="assets/cards.jpg">
-        </div>
-  
-    </div>
-</section> 
+    </section>
 
-<!-- next section? -->
 
-<section class="header">
-    <div class="container">
-        <h1 class="is-hidden-mobile">MILITARY-GRADE MAGNIFICATION <br>WITH <span>GOGOSCOPE MONOCULAR</span></h1>
-        <h1 class="is-hidden-tablet">MILITARY-GRADE <br>MAGNIFICATION WITH<br><span>GOGOSCOPE MONOCULAR</span></h1>
-        <h2><span>10X</span> MAGNIFICATION</h2>
-
-        <div class="columns">
-            <div class="column is-5 is-hidden-mobile has-video">
-                <video width="640" height="360" controls>
-                    <source src="./assets/video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="column is-2">
-                <img src="./assets/product1.png" alt="">
-            </div>
-            <div class="column is-5 is-centered">
-                <div class="usps">
-                    <div class="usp">
-                        <img src="./assets/usp1.png" alt="">
-                        <div class="text">
-                            <h3>Precision CNC/CAD construction</h3>
-                            <p>Super quality with aspherical elements for the sharpest optics!</p>
-                        </div>
-                    </div>
-                    <div class="usp">
-                        <img src="./assets/usp2.png" alt="">
-                        <div class="text">
-                            <h3>High-quality and lightweight</h3>
-                            <p>Carry anywhere-- see 50 miles or more!</p>
-                        </div>
-                    </div>
-                    <div class="usp">
-                        <img src="./assets/usp3.png" alt="">
-                        <div class="text">
-                            <h3>Get awesome photos</h3>
-                            <p>Clip lens to your smartphone to beat DSLRs!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="/checkout" class="button is-hidden-mobile">
-                    ORDER NOW & GET SPECIAL OFFER
-                </a>
-                <a href="/checkout" class="button is-hidden-tablet">
-                    ORDER NOW & <br>GET SPECIAL OFFER
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="video is-hidden-tablet">
-    <video width="640" height="360" controls>
-        <source src="./assets/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</section>
-
-<section class="infobar has-text-centered">
-    <p>The most advanced miniature telescope that zooms in for clear, crisp vision.</p>
-</section>
-
-<section class="content-1">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-6 is-hidden-mobile">
-                <img src="./assets/product2.png" alt="GogoScope Monocular">
-            </div>
-            <div class="column is-6">
-                <h3>GogoScope Monocular</h3>
-                <h2>HIGHLIGHTS</h2>
-                <p>The optical instrument every outdoor lover needs. Designed by the finest engineering,
-                    GogoScope Monocular helps you see for miles with precision and depth for an experience
-                    that enhances wildlife and nature. Enjoy the best view and amazing pictures.</p>
-
-                <div class="usps columns is-multiline is-mobile">
-                    <div class="column is-6">
-                        <div class="usp">
-                            <img src="./assets/picture.png" alt="">
-                            <p>Super sharp and super clear photos, amazing results</p>
-                        </div>
-                    </div>
-                    <div class="column is-6">
-                        <div class="usp">
-                            <img src="./assets/walk.png" alt="">
-                            <p>Always with you. No bulky, heavy lenses to carry</p>
-                        </div>
-                    </div>
-                    <div class="column is-6">
-                        <div class="usp">
-                            <img src="./assets/tent.png" alt="">
-                            <p>Enjoy while camping, hiking or adventuring, on the go</p>
-                        </div>
-                    </div>
-                    <div class="column is-6">
-                        <div class="usp">
-                            <img src="./assets/plane.png" alt="">
-                            <p>Perfect travel gear! You don’t need anything else!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column is-6 is-hidden-tablet">
-                <img src="./assets/product2.png" alt="GogoScope Monocular">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content-2">
-    <div class="container">
-        <h2>SEE WHAT'S HEADING YOUR WAY FROM MILES AWAY!</h2>
-        <div class="columns">
-            <div class="column is-2 is-centered">
-                <div class="usps">
-                    <div class="usp">
-                        <img src="./assets/water.png" alt="">
-                        <p>Waterproof</p>
-                    </div>
-                    <div class="usp">
-                        <img src="./assets/fog.png" alt="">
-                        <p>Fogproof</p>
-                    </div>
-                    <div class="usp">
-                        <img src="./assets/camera.png" alt="">
-                        <p>Enhances<br>camera</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-5 is-centered">
-                <img src="./assets/product3.png" alt="">
-                <div class="tags">
-                    <div class="tag">Weight: 320 g</div>
-                    <div class="tag">Color: Black</div>
-                    <div class="tag">Material: Advanced polymers</div>
-                </div>
-            </div>
-            <div class="column is-5 is-centered">
-                <h3>Technical Specifications</h3>
-                <ul>
-                    <li>Objective Diameter: 50mm</li>
-                    <li>Exit Pupil Diameter: 3mm</li>
-                    <li>Magnification: 10x fully multi-coated lenses and HD glass</li>
-                    <li>Lens: Fully Multi-Coated (FMC), Green</li>
-                    <li>Eye Relief: 20mm</li>
-                    <li>Field of View: 114/1100m</li>
-                    <li>Streamlined design, anti-skid frosted sure-grip</li>
-                    <li>Prism Type: BAK4 (same as $1,000 binoculars)</li>
-                </ul>
-
-                <div class="usps-2">
-                    <div class="usp">
-                        <img src="./assets/compass.png" alt="">
-                        <p>Compass</p>
-                    </div>
-                    <div class="usp">
-                        <img src="./assets/tripod.png" alt="">
-                        <p>Tripod</p>
-                    </div>
-                    <div class="usp">
-                        <img src="./assets/lens.png" alt="">
-                        <p>FMC BAK-4<br>LENS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta-banner">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-6 has-text-right">
-                <h2>SPECIAL DEAL APPLIED<br> ON ALL ORDERS TODAY!</h2>
-            </div>
-            <div class="column is-6">
-                <a href="/checkout" class="button">
-                    ORDER NOW & GET SPECIAL OFFER
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="infobar-2 has-text-centered">
-    <p>NEVER MISS OUT ON THE ACTION AGAIN!</p>
-</section>
-
-<section class="images">
-    <div class="columns is-multiline">
-        <div class="column is-6">
-            <img src="./assets/image1.jpg" alt="">
-        </div>
-        <div class="column is-6">
-            <div class="text">
-                <div class="has-image">
-                    <img src="./assets/mountain.png" alt="">
-                    <h2>Optimal Viewing In The Outdoors</h2>
-                </div>
-                <p>The GogoScope Monocular will create a new world of optimal viewing in the outdoors.
-                    From hunting to camping, this device will create a virtual experience that will keep you coming back for more.
-                    You can't experience what nature has to offer if you don't have GogoScope Monocular.
-                    Every plant, building, and bird will be so close, you'll feel as if it's within an arms-reach, even if it's miles away.</p>
-            </div>
-        </div>
-        <div class="column is-6 is-hidden-tablet">
-            <img src="./assets/image2.png" alt="">
-        </div>
-        <div class="column is-6">
-            <div class="text">
-                <div class="has-image">
-                    <img src="./assets/sport.png" alt="">
-                    <h2>Watch Your Favorite Sports</h2>
-                </div>
-                <p>Watch sporting events with the GogoScope Monocular telescope and cheer for your favorite team as if you were right on the field with them.
-                    For once, the players on the field won’t look like tiny little ants even if your seats are in the nosebleeds.
-                    Be in the game with your favorite athletes and make their win your win!</p>
-            </div>
-        </div>
-        <div class="column is-6 is-hidden-mobile">
-            <img src="./assets/image2.png" alt="">
-        </div>
-        <div class="column is-6">
-            <img src="./assets/image3.png" alt="">
-        </div>
-        <div class="column is-6">
-            <div class="text">
-                <div class="has-image">
-                    <img src="./assets/bag.png" alt="">
-                    <h2>Small And Compact</h2>
-                </div>
-                <p>This is the device you need!
-                    It's small, compact and light-weight so you can take it with you anywhere and not have to worry about the big bulky feel that usually
-                    comes with other telescopic devices. Keep it in your pocket and pull it out at that special moment when a rare species of bird flies overhead!</p>
-            </div>
-        </div>
-        <div class="column is-6 is-hidden-tablet">
-            <img src="./assets/image4.png" alt="">
-        </div>
-        <div class="column is-6">
-            <div class="text">
-                <div class="has-image">
-                    <img src="./assets/weather.png" alt="">
-                    <h2>Water, Dust & Fog-Proof</h2>
-                </div>
-                <p>Its waterproof and fog-proof technology make it the perfect companion to take when you are outdoors.
-                    It's scratch-resistant, which means you don't have to treat it like a delicate piece of equipment.</p>
-            </div>
-        </div>
-        <div class="column is-6 is-hidden-mobile">
-            <img src="./assets/image4.png" alt="">
-        </div>
-    </div>
-</section>
-
-<section class="image-banner has-text-centered">
-    <div class="container">
-        <img src="./assets/camera2.png" alt="">
-        <h2>CAPTURE LIFE'S MOMENTS</h2>
-        <p>WITH</p>
-        <h1>GOGOSCOPE MONOCULAR</h1>
-
-        <a href="/checkout" class="button">
-            GET 50% OFF NOW
-        </a>
-    </div>
-</section>
-
-<section class="reviews">
-    <div class="container">
-        <div class="card">
-            <div class="has-text-centered">
-                <img src="./assets/talk.png" alt="">
-                <h2>WHAT ARE PEOPLE SAYING?</h2>
-            </div>
-
-            <div class="reviews">
-                <div class="review">
-                    <img src="./assets/review1.jpg" alt="">
-                    <div class="inner">
-                        <h3>Jack Crandall - New York</h3>
-                        <p>I used to carry all my bulky, heavy camera gear with me on trips. I was afraid to leave them in my hotel room because they might get stolen.
-                            Now I take the GogoScope Monocular with me, and I carry everything in my pocket!</p>
-                        <p class="gray">2 days ago | Reply | Like</p>
-                    </div>
-                </div>
-                <div class="review">
-                    <img src="./assets/review2.jpg" alt="">
-                    <div class="inner">
-                        <h3>Amiri Ellens - Toronto</h3>
-                        <p>My photography professor clued me in on this lens! It’s small, but the quality is so high it takes better photos than my Nikon.
-                            I just put this in my bag wherever I go, and I can use my iPhone for amazing pictures!</p>
-                        <p class="gray">4 days ago | Reply | Like</p>
-                    </div>
-                </div>
-                <div class="review">
-                    <img src="./assets/review3.jpg" alt="">
-                    <div class="inner">
-                        <h3>Hans Gottfried - Munich</h3>
-                        <p>I'm an engineering student. I know about the high-tech CAD/CAM equipment that the GogoScope Monocular lens is made on.
-                            I can tell you that the precision and the sharpness of this monocular is as good or better than any lens made.
-                            And that includes to German optics like Zeiss.</p>
-                        <p class="gray">8 days ago | Reply | Like</p>
-                    </div>
-                </div>
-                <div class="review">
-                    <img src="./assets/review4.jpg" alt="">
-                    <div class="inner">
-                        <h3>Hitoshi Yamamoto - Tokyo</h3>
-                        <p>I used the GogoScope Monocular lens on an ocean voyage. Everyone else was fumbling around with heavy old-fashioned binoculars or giant telephoto lenses.
-                            I was able to see further and clearer with just my GogoScope Monocular. Everyone tried it and wanted to buy one!</p>
-                        <p class="gray">11 days ago | Reply | Like</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="faq">
-    <div class="container">
-        <div class="has-text-centered">
-            <img src="./assets/question.png" alt="">
-            <h2>FREQUENTLY ASKED QUESTIONS</h2>
-        </div>
-
-        <div class="questions">
-            <div class="question">
-                <h3>Will it work with my smartphone?</h3>
-                <p>Yes, it will work with almost any Apple iPhone or Android phone. Just clip it to your camera in seconds and start taking photos. So easy!</p>
-            </div>
-            <div class="question">
-                <h3>Can I use the GogoScope Monocular without a phone?</h3>
-                <p>Yes, the monocular is a fully-functional telescopic monocular. You can hold it up to your eye and see things over 50 miles away!</p>
-            </div>
-            <div class="question">
-                <h3>What is the GogoScope Monocular made of? Are the lenses good?</h3>
-                <p>The GogoScope Monocular is made of real, high-quality optical GLASS.
-                    They are multicoated just like the most expensive camera lenses, to give you super-clear images. They are the finest quality that can be made.</p>
-            </div>
-            <div class="question">
-                <h3>What is a BAK4 prism?</h3>
-                <p>BaK stands for BaritleichKron (German for "Barium Crown"). It is used in high-end binoculars.
-                    It is the highest quality, most desirable way to build a monocular or binocular prism, which is why we used it in the GogoScope Monocular.</p>
-            </div>
-            <div class="question">
-                <h3>Is the GogoScope Monocular rugged?</h3>
-                <p>Yes, it is extremely drop resistant and is covered with a non-skid, protective coating. You can use it safely even under extreme conditions!</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta-banner">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-6 has-text-right">
-                <h2>SPECIAL DEAL APPLIED<br> ON ALL ORDERS TODAY!</h2>
-            </div>
-            <div class="column is-6">
-                <a href="/checkout" class="button">
-                    ORDER NOW & GET SPECIAL OFFER
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="footer">
-    <img src="./assets/logo.png" alt="">
-    <ul>
-        <li><a href="https://gogogadgets.io/contact/" target="_blank">Contact Us</a></li>
-        <li><a href="https://gogogadgets.io/privacy-policy/" target="_blank">Privacy Policy</a></li>
-        <li><a href="https://gogogadgets.io/terms-conditions/" target="_blank">Terms & Conditions</a></li>
-        <li><a href="https://gogogadgets.io/returns-refunds/" target="_blank">Returns & Refunds</a></li>
-    </ul>
-</section>
-
-<section class="salespop">
-    <div class="outer">
-        <div class="has-image">
-            <img src="./assets/product1.png" alt="">
-        </div>
-        <div class="inner">
-            <p class="time"><i class="far fa-clock"></i> JUST NOW</p>
-            <p class="name">By <span class="name"></span></p>
-            <p class="quantity"><span class="quantity"></span>x GogoScope</p>
-            <p><i class="fas fa-check"></i> <b>verified purchase</b></p>
-        </div>
-    </div>
-</section>
 </body>
 </html>
